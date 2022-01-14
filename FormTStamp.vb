@@ -5,6 +5,14 @@ Public Class FormTStamp
     Private Function ChkValidate() As Boolean
         ' テキスト入力チェック
 
+        Dim strStartDate As String = ""
+        Dim strEndDate As String = ""
+        Dim strStartTime As String = ""
+        Dim strEndTime As String = ""
+
+        Dim chkDt As DateTime ' 日付型のチェック用
+
+
         If (String.IsNullOrEmpty(TxtWork.Text)) Then
             ' Nothing、もしくは空文字列である
             LblMsg.BackColor = Color.Crimson ' エラー系の背景色を設定
@@ -28,6 +36,24 @@ Public Class FormTStamp
 
         End If
 
+        ' 開始日を文字列で取得しておく。
+        strStartDate = TxtStartY.Text & TxtStartM.Text.PadLeft(2, "0"c) & TxtStartD.Text.PadLeft(2, "0"c)
+
+        If YYYYMMDDToDate(strStartDate) = Nothing Then
+            ' 日付チェック
+            LblMsg.BackColor = Color.Crimson ' エラー系の背景色を設定
+            LblMsg.Text = "開始日時の日付が正しくありません。"
+            ' 入力チェックエラー
+            Return False
+
+            'Else
+            ' 戻りの日付型を使いたい場合、(例：MM/DD/YYYY HH:MI:SS AM)
+            'Dim dateStart As Date
+            'dateStart = YYYYMMDDToDate(TxtStartY.Text & TxtStartM.Text & TxtStartD.Text)
+
+        End If
+
+
 
         If (String.IsNullOrEmpty(TxtEndY.Text)) Or
             (String.IsNullOrEmpty(TxtEndM.Text)) Or
@@ -42,6 +68,63 @@ Public Class FormTStamp
 
         End If
 
+        ' 終了日を文字列で取得しておく。
+        strEndDate = TxtEndY.Text & TxtEndM.Text.PadLeft(2, "0"c) & TxtEndD.Text.PadLeft(2, "0"c)
+
+        If YYYYMMDDToDate(strEndDate) = Nothing Then
+            ' 日付チェック
+            LblMsg.BackColor = Color.Crimson ' エラー系の背景色を設定
+            LblMsg.Text = "終了日時の日付が正しくありません。"
+            ' 入力チェックエラー
+            Return False
+
+        End If
+
+
+
+        ' 開始時間を文字列で取得しておく。
+        strStartTime = TxtStartTimeH.Text.PadLeft(2, "0"c) & ":" & TxtStartTimeM.Text.PadLeft(2, "0"c) & ":00"
+        ' 終了時間を文字列で取得しておく。
+        strEndTime = TxtEndTimeH.Text.PadLeft(2, "0"c) & ":" & TxtEndTimeM.Text.PadLeft(2, "0"c) & ":00"
+
+
+        If DateTime.TryParse(strStartTime, chkDt) = False Then
+            ' 時刻チェック
+            LblMsg.BackColor = Color.Crimson ' エラー系の背景色を設定
+            LblMsg.Text = "開始時刻が正しくありません。"
+            ' 入力チェックエラー
+            Return False
+
+        ElseIf DateTime.TryParse(strEndTime, chkDt) = False Then
+            ' 時刻チェック
+            LblMsg.BackColor = Color.Crimson ' エラー系の背景色を設定
+            LblMsg.Text = "終了時刻が正しくありません。"
+            ' 入力チェックエラー
+            Return False
+
+        End If
+
+
+        ' 開始時間を文字列で再取得。
+        strStartTime = TxtStartTimeH.Text.PadLeft(2, "0"c) & TxtStartTimeM.Text.PadLeft(2, "0"c)
+        ' 終了時間を文字列で再取得。
+        strEndTime = TxtEndTimeH.Text.PadLeft(2, "0"c) & TxtEndTimeM.Text.PadLeft(2, "0"c)
+
+        If YYYYMMDDToDate(strStartDate) > YYYYMMDDToDate(strEndDate) Then
+            ' 日付チェック
+            LblMsg.BackColor = Color.Crimson ' エラー系の背景色を設定
+            LblMsg.Text = "終了日が、開始日より過去になっています。"
+            ' 入力チェックエラー
+            Return False
+
+        ElseIf CInt(strStartTime) > CInt(strEndTime) Then
+            ' 時刻チェック
+            LblMsg.BackColor = Color.Crimson ' エラー系の背景色を設定
+            LblMsg.Text = "終了時間が、開始時間より過去になっています。"
+            ' 入力チェックエラー
+            Return False
+
+        End If
 
 
         ' 入力チェックに問題無し
@@ -51,6 +134,8 @@ Public Class FormTStamp
 
     Function YYYYMMDDToDate(value As String) As Date
         Dim formatedValue As String
+
+        ' 日付チェック
 
         '8文字でない場合は処理終了
         If value.Length <> 8 Then Return Nothing
@@ -77,7 +162,7 @@ Public Class FormTStamp
             Dim strSql As String
 
             strSql = "SELECT WORKS.* FROM USERS, WORKS WHERE USERS.ID = WORKS.USER_ID AND USERS.ID ='" & Module1.mdl_member_id & "'"
-            strSql = strSql & " ORDER BY WORKS.START_DATE, WORKS.START_TIME"
+            strSql = strSql & " ORDER BY WORKS.START_DATE, WORKS.START_TIME, WORKS.END_DATE, WORKS.END_TIME"
 
 
             'Console.WriteLine(strSql) ' デバッグ用　コンソールに出力
@@ -205,6 +290,23 @@ Public Class FormTStamp
         End If
 
 
+        Dim strStartDate As String = ""
+        Dim strEndDate As String = ""
+        Dim strStartTime As String = ""
+        Dim strEndTime As String = ""
+
+        ' 開始日を文字列で取得しておく。
+        strStartDate = TxtStartY.Text & "-" & TxtStartM.Text.PadLeft(2, "0"c) & "-" & TxtStartD.Text.PadLeft(2, "0"c)
+        ' 終了日を文字列で取得しておく。
+        strEndDate = TxtEndY.Text & "-" & TxtEndM.Text.PadLeft(2, "0"c) & "-" & TxtEndD.Text.PadLeft(2, "0"c)
+
+
+        ' 開始時間を文字列で取得しておく。
+        strStartTime = TxtStartTimeH.Text.PadLeft(2, "0"c) & ":" & TxtStartTimeM.Text.PadLeft(2, "0"c) & ":00"
+        ' 終了時間を文字列で取得しておく。
+        strEndTime = TxtEndTimeH.Text.PadLeft(2, "0"c) & ":" & TxtEndTimeM.Text.PadLeft(2, "0"c) & ":00"
+
+
         Using conn As New NpgsqlConnection(FormMenu.STR_DB_CONN)
 
             ' データベースオープン
@@ -212,14 +314,14 @@ Public Class FormTStamp
 
             Dim strSql As String
             strSql = "INSERT INTO WORKS (USER_ID, CONTENT, START_DATE, START_TIME, END_DATE, END_TIME) VALUES ("
-            strSql = strSql & " " & Module1.mdl_member_id & ", '" & TxtWork.Text & "'"
-            strSql = strSql & ",'" & TxtStartY.Text & "-" & TxtStartM.Text & "-" & TxtStartD.Text & "'"
-            strSql = strSql & ",'" & TxtStartTimeH.Text & ":" & TxtStartTimeM.Text & ":00'"
-            strSql = strSql & ",'" & TxtEndY.Text & "-" & TxtEndM.Text & "-" & TxtEndD.Text & "'"
-            strSql = strSql & ",'" & TxtEndTimeH.Text & ":" & TxtEndTimeM.Text & ":00'"
+            strSql = strSql & " '" & Module1.mdl_member_id & "', '" & TxtWork.Text & "'"
+            strSql = strSql & ",'" & strStartDate & "'"
+            strSql = strSql & ",'" & strStartTime & "'"
+            strSql = strSql & ",'" & strEndDate & "'"
+            strSql = strSql & ",'" & strEndTime & "'"
             strSql = strSql & " )"
 
-            '            Console.WriteLine(strSql) ' デバッグ用　コンソールに出力
+            'Console.WriteLine("FormTStamp Ins:" & strSql) ' デバッグ用　コンソールに出力
             Dim command As NpgsqlCommand = New NpgsqlCommand(strSql, conn)
             Dim retcnt = command.ExecuteNonQuery()
             '            MessageBox.Show("count = " & CStr(retcnt))
@@ -282,8 +384,31 @@ Public Class FormTStamp
             '入力チェックがエラーの時は強制終了
             Return
 
+        ElseIf (String.IsNullOrEmpty(txtID.Text)) Then
+            ' Nothing、もしくは空文字列である
+            LblMsg.BackColor = Color.Crimson ' エラー系の背景色を設定
+            LblMsg.Text = "更新対象が存在しません。"
+            ' 入力チェックエラー
+            Return
+
         End If
 
+
+        Dim strStartDate As String = ""
+        Dim strEndDate As String = ""
+        Dim strStartTime As String = ""
+        Dim strEndTime As String = ""
+
+        ' 開始日を文字列で取得しておく。
+        strStartDate = TxtStartY.Text & "-" & TxtStartM.Text.PadLeft(2, "0"c) & "-" & TxtStartD.Text.PadLeft(2, "0"c)
+        ' 終了日を文字列で取得しておく。
+        strEndDate = TxtEndY.Text & "-" & TxtEndM.Text.PadLeft(2, "0"c) & "-" & TxtEndD.Text.PadLeft(2, "0"c)
+
+
+        ' 開始時間を文字列で取得しておく。
+        strStartTime = TxtStartTimeH.Text.PadLeft(2, "0"c) & ":" & TxtStartTimeM.Text.PadLeft(2, "0"c) & ":00"
+        ' 終了時間を文字列で取得しておく。
+        strEndTime = TxtEndTimeH.Text.PadLeft(2, "0"c) & ":" & TxtEndTimeM.Text.PadLeft(2, "0"c) & ":00"
 
         Using conn As New NpgsqlConnection(FormMenu.STR_DB_CONN)
 
@@ -293,14 +418,14 @@ Public Class FormTStamp
             Dim strSql As String
             strSql = "UPDATE WORKS SET"
             strSql = strSql & " CONTENT = '" & TxtWork.Text & "'"
-            strSql = strSql & ", START_DATE = '" & TxtStartY.Text & "-" & TxtStartM.Text & "-" & TxtStartD.Text & "'"
-            strSql = strSql & ", START_TIME = '" & TxtStartTimeH.Text & ":" & TxtStartTimeM.Text & ":00'"
-            strSql = strSql & ", END_DATE = '" & TxtEndY.Text & "-" & TxtEndM.Text & "-" & TxtEndD.Text & "'"
-            strSql = strSql & ", END_TIME = '" & TxtEndTimeH.Text & ":" & TxtEndTimeM.Text & ":00'"
+            strSql = strSql & ", START_DATE = '" & strStartDate & "'"
+            strSql = strSql & ", START_TIME = '" & strStartTime & "'"
+            strSql = strSql & ", END_DATE = '" & strEndDate & "'"
+            strSql = strSql & ", END_TIME = '" & strEndTime & "'"
             strSql = strSql & ", UPDATED_AT = CURRENT_TIMESTAMP"
-            strSql = strSql & " WHERE ID =" & txtID.Text
+            strSql = strSql & " WHERE ID = " & txtID.Text & " AND USER_ID = '" & Module1.mdl_member_id & "'"
 
-            '            Console.WriteLine(strSql) ' デバッグ用　コンソールに出力
+            'Console.WriteLine("FormTStamp Upd:" & strSql) ' デバッグ用　コンソールに出力
             Dim command As NpgsqlCommand = New NpgsqlCommand(strSql, conn)
             Dim retcnt = command.ExecuteNonQuery()
             '            MessageBox.Show("count = " & CStr(retcnt))
@@ -432,4 +557,31 @@ Public Class FormTStamp
         End If
     End Sub
 
+    Private Sub DateTimePickerS_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePickerS.ValueChanged
+
+        '開始日のカレンダーを変更した時
+
+        Dim strDatePicker As String
+        strDatePicker = DateTimePickerS.Value.ToShortDateString()
+
+        ' 開始日を取得する
+        TxtStartY.Text = strDatePicker.Substring(0, 4)
+        TxtStartM.Text = strDatePicker.Substring(5, 2)
+        TxtStartD.Text = strDatePicker.Substring(8, 2)
+
+    End Sub
+
+    Private Sub DateTimePickerE_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePickerE.ValueChanged
+
+        '終了日のカレンダーを変更した時
+
+        Dim strDatePicker As String
+        strDatePicker = DateTimePickerE.Value.ToShortDateString()
+
+        ' 終了日を取得する
+        TxtEndY.Text = strDatePicker.Substring(0, 4)
+        TxtEndM.Text = strDatePicker.Substring(5, 2)
+        TxtEndD.Text = strDatePicker.Substring(8, 2)
+
+    End Sub
 End Class

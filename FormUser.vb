@@ -96,7 +96,6 @@ Public Class FormUser
     Private Sub InitDataGrid()
         ' DataGridViewに、データベースから取得したデータをセット
 
-        '        Using conn As New NpgsqlConnection("Server=localhost; Port=5432; User Id=USER01;Password=USER01;Database=DB01")
         Using conn As New NpgsqlConnection(FormMenu.STR_DB_CONN)
 
             ' データベースオープン
@@ -179,23 +178,7 @@ Public Class FormUser
 
     End Sub
 
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
-
-        ' 詳細ボタンを押した時に、ユーザー情報を取得する。
-        TxtName.Text = DataGridView1.Rows(DataGridView1.SelectedCells(0).RowIndex).Cells(2).Value
-        TxtEmail.Text = DataGridView1.Rows(DataGridView1.SelectedCells(0).RowIndex).Cells(3).Value
-        TxtPassword.Text = DataGridView1.Rows(DataGridView1.SelectedCells(0).RowIndex).Cells(4).Value
-
-        ' デバッグ用にIDもテキストに表示
-        TxtID.Text = DataGridView1.Rows(DataGridView1.SelectedCells(0).RowIndex).Cells(1).Value
-
-    End Sub
-
-
-
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
 
         'メッセージ表示用の変数
         '     Dim strMessageList As String
@@ -252,7 +235,7 @@ Public Class FormUser
             strSql = strSql & ", UPDATED_AT = CURRENT_TIMESTAMP"
             strSql = strSql & " WHERE ID = '" & TxtID.Text & "'"
 
-            Console.WriteLine(strSql) ' デバッグ用　コンソールに出力
+            'Console.WriteLine(strSql) ' デバッグ用　コンソールに出力
 
             Dim command As NpgsqlCommand = New NpgsqlCommand(strSql, conn)
             Dim retcnt = command.ExecuteNonQuery()

@@ -23,7 +23,6 @@ Partial Class FormUser
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnEdit = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TxtName = New System.Windows.Forms.TextBox()
@@ -49,18 +48,6 @@ Partial Class FormUser
         Me.Label1.Size = New System.Drawing.Size(253, 34)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "登録者管理画面"
-        '
-        'btnEdit
-        '
-        Me.btnEdit.AutoSize = True
-        Me.btnEdit.Font = New System.Drawing.Font("MS UI Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnEdit.Location = New System.Drawing.Point(704, 45)
-        Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(149, 54)
-        Me.btnEdit.TabIndex = 1
-        Me.btnEdit.Text = "詳細"
-        Me.btnEdit.UseVisualStyleBackColor = True
-        Me.btnEdit.Visible = False
         '
         'DataGridView1
         '
@@ -218,7 +205,6 @@ Partial Class FormUser
         Me.Controls.Add(Me.TxtName)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FormUser"
         Me.Text = "会員登録"
@@ -229,7 +215,6 @@ Partial Class FormUser
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnEdit As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label3 As Label
     Friend WithEvents TxtName As TextBox
