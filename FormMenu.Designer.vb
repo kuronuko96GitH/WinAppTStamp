@@ -27,13 +27,15 @@ Partial Class FormMenu
         Me.Button1 = New System.Windows.Forms.Button()
         Me.lblLoginID = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Btn2
         '
         Me.Btn2.AutoSize = True
         Me.Btn2.Font = New System.Drawing.Font("MS UI Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Btn2.Location = New System.Drawing.Point(56, 188)
+        Me.Btn2.Location = New System.Drawing.Point(67, 233)
         Me.Btn2.Name = "Btn2"
         Me.Btn2.Size = New System.Drawing.Size(192, 54)
         Me.Btn2.TabIndex = 15
@@ -44,7 +46,7 @@ Partial Class FormMenu
         '
         Me.BtnUser.AutoSize = True
         Me.BtnUser.Font = New System.Drawing.Font("MS UI Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnUser.Location = New System.Drawing.Point(56, 112)
+        Me.BtnUser.Location = New System.Drawing.Point(67, 157)
         Me.BtnUser.Name = "BtnUser"
         Me.BtnUser.Size = New System.Drawing.Size(192, 54)
         Me.BtnUser.TabIndex = 16
@@ -83,11 +85,33 @@ Partial Class FormMenu
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "会員登録ID："
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label2.Location = New System.Drawing.Point(159, 84)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(100, 34)
+        Me.Label2.TabIndex = 21
+        Me.Label2.Text = "氏名："
+        '
+        'lblName
+        '
+        Me.lblName.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.lblName.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblName.Location = New System.Drawing.Point(256, 84)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(339, 34)
+        Me.lblName.TabIndex = 20
+        Me.lblName.Text = "やまだたろう"
+        '
         'FormMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lblName)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblLoginID)
         Me.Controls.Add(Me.Button1)
@@ -105,4 +129,6 @@ Partial Class FormMenu
     Friend WithEvents Button1 As Button
     Friend WithEvents lblLoginID As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents lblName As Label
 End Class

@@ -48,16 +48,42 @@ Public Class FormLogin
             conn.Open()
 
             Dim strSql As String
-            strSql = "SELECT COUNT(*) FROM USERS"
+
+
+            'strSql = "SELECT COUNT(*) FROM USERS"
+            'strSql = strSql & " WHERE ID = '" & TxtID.Text & "' AND PASSWORD ='" & TxtPassword.Text & "'"
+
+            '' データベースからデータを取得
+            'Dim cmd As NpgsqlCommand = New NpgsqlCommand(strSql, conn)
+
+            ''ExecuteScalar：クエリを実行し、そのクエリが返す結果セットの最初の行にある最初の列を返す。
+            'retcnt = CInt(cmd.ExecuteScalar())
+
+
+
+            strSql = "SELECT ID, NAME, ADMIN_CODE FROM USERS"
             strSql = strSql & " WHERE ID = '" & TxtID.Text & "' AND PASSWORD ='" & TxtPassword.Text & "'"
+
+            'Console.WriteLine("FormLogin:" & strSql) ' デバッグ用　コンソールに出力
+
 
             ' データベースからデータを取得
             Dim cmd As NpgsqlCommand = New NpgsqlCommand(strSql, conn)
+            Dim da As NpgsqlDataAdapter = New NpgsqlDataAdapter(cmd)
+            Dim dt As DataTable = New DataTable()
+            da.Fill(dt)
 
-            'ExecuteScalar：クエリを実行し、そのクエリが返す結果セットの最初の行にある最初の列を返す。
-            retcnt = CInt(cmd.ExecuteScalar())
+            If dt.Rows.Count = 1 Then
+                ' 該当するデータがあった場合
+                retcnt = 1
 
-            'Console.WriteLine(strSql) ' デバッグ用　コンソールに出力
+                For Each row As DataRow In dt.Rows
+                    TxtName.Text = row("NAME").ToString()
+                    TxtAdminCode.Text = row("ADMIN_CODE").ToString()
+                Next
+
+            End If
+
 
             ' データベースクローズ
             conn.Close()

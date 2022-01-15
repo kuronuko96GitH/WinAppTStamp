@@ -34,11 +34,14 @@
 
     Private Sub FormMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        ' ログイン画面で入力した登録IDを取得
-        Me.lblLoginID.Text = FormLogin.TxtID.Text
+        ' ログイン画面で入力した登録IDを設定
         Module1.mdl_member_id = FormLogin.TxtID.Text
+        lblLoginID.Text = Module1.mdl_member_id
 
-        If Module1.mdl_member_id = "0001" Then
+        ' ログイン画面で取得した氏名を設定
+        lblName.Text = FormLogin.TxtName.Text
+
+        If FormLogin.TxtAdminCode.Text = "1" Then
             ' ログインユーザーが管理者の場合
             BtnUser.Enabled = True
         Else

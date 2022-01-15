@@ -30,6 +30,10 @@ Partial Class FormLogin
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LblMsg = New System.Windows.Forms.Label()
+        Me.TxtAdminCode = New System.Windows.Forms.TextBox()
+        Me.TxtName = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnLogin
@@ -94,13 +98,14 @@ Partial Class FormLogin
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label2.Location = New System.Drawing.Point(318, 46)
+        Me.Label2.Location = New System.Drawing.Point(4, 46)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(184, 34)
+        Me.Label2.Size = New System.Drawing.Size(879, 34)
         Me.Label2.TabIndex = 17
         Me.Label2.Text = "ログイン画面"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LblMsg
         '
@@ -117,11 +122,57 @@ Partial Class FormLogin
         Me.LblMsg.Text = "エラーメッセージも含む"
         Me.LblMsg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'TxtAdminCode
+        '
+        Me.TxtAdminCode.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.TxtAdminCode.ImeMode = System.Windows.Forms.ImeMode.Disable
+        Me.TxtAdminCode.Location = New System.Drawing.Point(724, 369)
+        Me.TxtAdminCode.Name = "TxtAdminCode"
+        Me.TxtAdminCode.Size = New System.Drawing.Size(159, 41)
+        Me.TxtAdminCode.TabIndex = 29
+        Me.TxtAdminCode.Visible = False
+        '
+        'TxtName
+        '
+        Me.TxtName.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.TxtName.ImeMode = System.Windows.Forms.ImeMode.Disable
+        Me.TxtName.Location = New System.Drawing.Point(724, 416)
+        Me.TxtName.Name = "TxtName"
+        Me.TxtName.Size = New System.Drawing.Size(159, 41)
+        Me.TxtName.TabIndex = 30
+        Me.TxtName.Visible = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label4.Location = New System.Drawing.Point(672, 332)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(211, 34)
+        Me.Label4.TabIndex = 31
+        Me.Label4.Text = "管理者コード："
+        Me.Label4.Visible = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label6.Location = New System.Drawing.Point(618, 416)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(100, 34)
+        Me.Label6.TabIndex = 32
+        Me.Label6.Text = "氏名："
+        Me.Label6.Visible = False
+        '
         'FormLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(882, 504)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.TxtName)
+        Me.Controls.Add(Me.TxtAdminCode)
         Me.Controls.Add(Me.LblMsg)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnLogin)
@@ -145,4 +196,8 @@ Partial Class FormLogin
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents LblMsg As Label
+    Friend WithEvents TxtAdminCode As TextBox
+    Friend WithEvents TxtName As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label6 As Label
 End Class
