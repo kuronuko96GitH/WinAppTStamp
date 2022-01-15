@@ -96,6 +96,10 @@ Public Class FormLogin
         If (retcnt = 1) Then
             ' ログイン可能なデータを取得できた
 
+            ' モジュールにIDと氏名を登録する。
+            Module1.mdl_id = TxtID.Text
+            Module1.mdl_name = TxtName.Text
+
             LblMsg.BackColor = SystemColors.ActiveCaption
             LblMsg.Text = "ログインが完了しました。"
             '            MessageBox.Show("ログインが完了しました。")

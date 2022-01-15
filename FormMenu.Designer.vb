@@ -22,25 +22,26 @@ Partial Class FormMenu
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Btn2 = New System.Windows.Forms.Button()
+        Me.BtnTStamp = New System.Windows.Forms.Button()
         Me.BtnUser = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.lblLoginID = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
+        Me.BtnReward = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Btn2
+        'BtnTStamp
         '
-        Me.Btn2.AutoSize = True
-        Me.Btn2.Font = New System.Drawing.Font("MS UI Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Btn2.Location = New System.Drawing.Point(67, 233)
-        Me.Btn2.Name = "Btn2"
-        Me.Btn2.Size = New System.Drawing.Size(192, 54)
-        Me.Btn2.TabIndex = 15
-        Me.Btn2.Text = "打刻登録"
-        Me.Btn2.UseVisualStyleBackColor = True
+        Me.BtnTStamp.AutoSize = True
+        Me.BtnTStamp.Font = New System.Drawing.Font("MS UI Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnTStamp.Location = New System.Drawing.Point(67, 233)
+        Me.BtnTStamp.Name = "BtnTStamp"
+        Me.BtnTStamp.Size = New System.Drawing.Size(192, 54)
+        Me.BtnTStamp.TabIndex = 15
+        Me.BtnTStamp.Text = "打刻登録"
+        Me.BtnTStamp.UseVisualStyleBackColor = True
         '
         'BtnUser
         '
@@ -105,18 +106,30 @@ Partial Class FormMenu
         Me.lblName.TabIndex = 20
         Me.lblName.Text = "やまだたろう"
         '
+        'BtnReward
+        '
+        Me.BtnReward.AutoSize = True
+        Me.BtnReward.Font = New System.Drawing.Font("MS UI Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnReward.Location = New System.Drawing.Point(67, 307)
+        Me.BtnReward.Name = "BtnReward"
+        Me.BtnReward.Size = New System.Drawing.Size(192, 54)
+        Me.BtnReward.TabIndex = 22
+        Me.BtnReward.Text = "報酬計算"
+        Me.BtnReward.UseVisualStyleBackColor = True
+        '
         'FormMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.BtnReward)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.lblName)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblLoginID)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.BtnUser)
-        Me.Controls.Add(Me.Btn2)
+        Me.Controls.Add(Me.BtnTStamp)
         Me.Name = "FormMenu"
         Me.Text = "メニュー画面"
         Me.ResumeLayout(False)
@@ -124,11 +137,12 @@ Partial Class FormMenu
 
     End Sub
 
-    Friend WithEvents Btn2 As Button
+    Friend WithEvents BtnTStamp As Button
     Friend WithEvents BtnUser As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents lblLoginID As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents lblName As Label
+    Friend WithEvents BtnReward As Button
 End Class

@@ -73,10 +73,10 @@ Partial Class FormTStamp
         Me.LblMsg.BackColor = System.Drawing.Color.Crimson
         Me.LblMsg.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.LblMsg.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LblMsg.Location = New System.Drawing.Point(-1, 674)
+        Me.LblMsg.Location = New System.Drawing.Point(-1, 539)
         Me.LblMsg.Margin = New System.Windows.Forms.Padding(0)
         Me.LblMsg.Name = "LblMsg"
-        Me.LblMsg.Size = New System.Drawing.Size(1371, 46)
+        Me.LblMsg.Size = New System.Drawing.Size(1028, 37)
         Me.LblMsg.TabIndex = 27
         Me.LblMsg.Text = "エラーメッセージも含む"
         Me.LblMsg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -85,9 +85,10 @@ Partial Class FormTStamp
         '
         Me.txtID.Enabled = False
         Me.txtID.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.txtID.Location = New System.Drawing.Point(1241, 8)
+        Me.txtID.Location = New System.Drawing.Point(931, 6)
+        Me.txtID.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtID.Name = "txtID"
-        Me.txtID.Size = New System.Drawing.Size(84, 41)
+        Me.txtID.Size = New System.Drawing.Size(64, 34)
         Me.txtID.TabIndex = 25
         Me.txtID.Visible = False
         '
@@ -95,10 +96,10 @@ Partial Class FormTStamp
         '
         Me.Label2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Label2.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label2.Location = New System.Drawing.Point(106, 136)
+        Me.Label2.Location = New System.Drawing.Point(80, 109)
         Me.Label2.Margin = New System.Windows.Forms.Padding(0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(575, 34)
+        Me.Label2.Size = New System.Drawing.Size(431, 27)
         Me.Label2.TabIndex = 17
         Me.Label2.Text = "打刻一覧"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -107,20 +108,22 @@ Partial Class FormTStamp
         '
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(106, 173)
+        Me.DataGridView1.Location = New System.Drawing.Point(80, 138)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(575, 470)
+        Me.DataGridView1.Size = New System.Drawing.Size(431, 376)
         Me.DataGridView1.TabIndex = 16
         '
         'Label1
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label1.Location = New System.Drawing.Point(5, 52)
+        Me.Label1.Location = New System.Drawing.Point(4, 42)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1348, 34)
+        Me.Label1.Size = New System.Drawing.Size(1011, 27)
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "勤怠管理（打刻）画面"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -129,9 +132,10 @@ Partial Class FormTStamp
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label6.Location = New System.Drawing.Point(737, 136)
+        Me.Label6.Location = New System.Drawing.Point(553, 109)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(100, 34)
+        Me.Label6.Size = New System.Drawing.Size(80, 27)
         Me.Label6.TabIndex = 28
         Me.Label6.Text = "氏名："
         '
@@ -140,9 +144,10 @@ Partial Class FormTStamp
         Me.lblName.AutoSize = True
         Me.lblName.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.lblName.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblName.Location = New System.Drawing.Point(837, 136)
+        Me.lblName.Location = New System.Drawing.Point(628, 109)
+        Me.lblName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(160, 34)
+        Me.lblName.Size = New System.Drawing.Size(127, 27)
         Me.lblName.TabIndex = 29
         Me.lblName.Text = "てすと太郎"
         '
@@ -150,9 +155,10 @@ Partial Class FormTStamp
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label7.Location = New System.Drawing.Point(1061, 11)
+        Me.Label7.Location = New System.Drawing.Point(796, 9)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(148, 34)
+        Me.Label7.Size = New System.Drawing.Size(118, 27)
         Me.Label7.TabIndex = 30
         Me.Label7.Text = "WorksID："
         Me.Label7.Visible = False
@@ -161,9 +167,10 @@ Partial Class FormTStamp
         '
         Me.btnIns.AutoSize = True
         Me.btnIns.Font = New System.Drawing.Font("MS UI Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnIns.Location = New System.Drawing.Point(743, 589)
+        Me.btnIns.Location = New System.Drawing.Point(557, 471)
+        Me.btnIns.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnIns.Name = "btnIns"
-        Me.btnIns.Size = New System.Drawing.Size(149, 54)
+        Me.btnIns.Size = New System.Drawing.Size(112, 43)
         Me.btnIns.TabIndex = 12
         Me.btnIns.Text = "新規登録"
         Me.btnIns.UseVisualStyleBackColor = True
@@ -172,9 +179,10 @@ Partial Class FormTStamp
         '
         Me.btnUpd.AutoSize = True
         Me.btnUpd.Font = New System.Drawing.Font("MS UI Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnUpd.Location = New System.Drawing.Point(938, 589)
+        Me.btnUpd.Location = New System.Drawing.Point(704, 471)
+        Me.btnUpd.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnUpd.Name = "btnUpd"
-        Me.btnUpd.Size = New System.Drawing.Size(149, 54)
+        Me.btnUpd.Size = New System.Drawing.Size(112, 43)
         Me.btnUpd.TabIndex = 13
         Me.btnUpd.Text = "更新"
         Me.btnUpd.UseVisualStyleBackColor = True
@@ -183,9 +191,10 @@ Partial Class FormTStamp
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label5.Location = New System.Drawing.Point(735, 472)
+        Me.Label5.Location = New System.Drawing.Point(551, 378)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(168, 34)
+        Me.Label5.Size = New System.Drawing.Size(134, 27)
         Me.Label5.TabIndex = 35
         Me.Label5.Text = "終了日時："
         '
@@ -193,10 +202,11 @@ Partial Class FormTStamp
         '
         Me.TxtStartY.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.TxtStartY.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.TxtStartY.Location = New System.Drawing.Point(743, 381)
+        Me.TxtStartY.Location = New System.Drawing.Point(557, 305)
+        Me.TxtStartY.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtStartY.MaxLength = 4
         Me.TxtStartY.Name = "TxtStartY"
-        Me.TxtStartY.Size = New System.Drawing.Size(82, 41)
+        Me.TxtStartY.Size = New System.Drawing.Size(62, 34)
         Me.TxtStartY.TabIndex = 2
         Me.TxtStartY.Text = "2022"
         '
@@ -204,28 +214,31 @@ Partial Class FormTStamp
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label4.Location = New System.Drawing.Point(735, 330)
+        Me.Label4.Location = New System.Drawing.Point(551, 264)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(168, 34)
+        Me.Label4.Size = New System.Drawing.Size(134, 27)
         Me.Label4.TabIndex = 33
         Me.Label4.Text = "開始日時："
         '
         'TxtWork
         '
         Me.TxtWork.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtWork.Location = New System.Drawing.Point(741, 242)
+        Me.TxtWork.Location = New System.Drawing.Point(556, 194)
+        Me.TxtWork.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtWork.MaxLength = 255
         Me.TxtWork.Name = "TxtWork"
-        Me.TxtWork.Size = New System.Drawing.Size(520, 41)
+        Me.TxtWork.Size = New System.Drawing.Size(391, 34)
         Me.TxtWork.TabIndex = 1
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label3.Location = New System.Drawing.Point(735, 205)
+        Me.Label3.Location = New System.Drawing.Point(551, 164)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(168, 34)
+        Me.Label3.Size = New System.Drawing.Size(134, 27)
         Me.Label3.TabIndex = 31
         Me.Label3.Text = "勤務内容："
         '
@@ -233,9 +246,10 @@ Partial Class FormTStamp
         '
         Me.TxtStart.Enabled = False
         Me.TxtStart.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtStart.Location = New System.Drawing.Point(891, 277)
+        Me.TxtStart.Location = New System.Drawing.Point(668, 222)
+        Me.TxtStart.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtStart.Name = "TxtStart"
-        Me.TxtStart.Size = New System.Drawing.Size(345, 41)
+        Me.TxtStart.Size = New System.Drawing.Size(260, 34)
         Me.TxtStart.TabIndex = 39
         Me.TxtStart.Visible = False
         '
@@ -243,9 +257,10 @@ Partial Class FormTStamp
         '
         Me.TxtEnd.Enabled = False
         Me.TxtEnd.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtEnd.Location = New System.Drawing.Point(897, 442)
+        Me.TxtEnd.Location = New System.Drawing.Point(673, 354)
+        Me.TxtEnd.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtEnd.Name = "TxtEnd"
-        Me.TxtEnd.Size = New System.Drawing.Size(345, 41)
+        Me.TxtEnd.Size = New System.Drawing.Size(260, 34)
         Me.TxtEnd.TabIndex = 40
         Me.TxtEnd.Visible = False
         '
@@ -253,9 +268,10 @@ Partial Class FormTStamp
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label8.Location = New System.Drawing.Point(827, 384)
+        Me.Label8.Location = New System.Drawing.Point(620, 307)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(49, 34)
+        Me.Label8.Size = New System.Drawing.Size(39, 27)
         Me.Label8.TabIndex = 41
         Me.Label8.Text = "年"
         '
@@ -263,9 +279,10 @@ Partial Class FormTStamp
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label9.Location = New System.Drawing.Point(916, 384)
+        Me.Label9.Location = New System.Drawing.Point(687, 307)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(49, 34)
+        Me.Label9.Size = New System.Drawing.Size(39, 27)
         Me.Label9.TabIndex = 42
         Me.Label9.Text = "月"
         '
@@ -273,9 +290,10 @@ Partial Class FormTStamp
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label10.Location = New System.Drawing.Point(1003, 384)
+        Me.Label10.Location = New System.Drawing.Point(752, 307)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(49, 34)
+        Me.Label10.Size = New System.Drawing.Size(39, 27)
         Me.Label10.TabIndex = 43
         Me.Label10.Text = "日"
         '
@@ -283,10 +301,11 @@ Partial Class FormTStamp
         '
         Me.TxtStartD.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.TxtStartD.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.TxtStartD.Location = New System.Drawing.Point(965, 381)
+        Me.TxtStartD.Location = New System.Drawing.Point(724, 305)
+        Me.TxtStartD.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtStartD.MaxLength = 2
         Me.TxtStartD.Name = "TxtStartD"
-        Me.TxtStartD.Size = New System.Drawing.Size(41, 41)
+        Me.TxtStartD.Size = New System.Drawing.Size(32, 34)
         Me.TxtStartD.TabIndex = 4
         Me.TxtStartD.Text = "02"
         '
@@ -294,10 +313,11 @@ Partial Class FormTStamp
         '
         Me.TxtStartM.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.TxtStartM.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.TxtStartM.Location = New System.Drawing.Point(875, 381)
+        Me.TxtStartM.Location = New System.Drawing.Point(656, 305)
+        Me.TxtStartM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtStartM.MaxLength = 2
         Me.TxtStartM.Name = "TxtStartM"
-        Me.TxtStartM.Size = New System.Drawing.Size(41, 41)
+        Me.TxtStartM.Size = New System.Drawing.Size(32, 34)
         Me.TxtStartM.TabIndex = 3
         Me.TxtStartM.Text = "01"
         '
@@ -305,10 +325,11 @@ Partial Class FormTStamp
         '
         Me.TxtStartTimeH.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.TxtStartTimeH.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.TxtStartTimeH.Location = New System.Drawing.Point(1059, 381)
+        Me.TxtStartTimeH.Location = New System.Drawing.Point(794, 305)
+        Me.TxtStartTimeH.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtStartTimeH.MaxLength = 2
         Me.TxtStartTimeH.Name = "TxtStartTimeH"
-        Me.TxtStartTimeH.Size = New System.Drawing.Size(41, 41)
+        Me.TxtStartTimeH.Size = New System.Drawing.Size(32, 34)
         Me.TxtStartTimeH.TabIndex = 5
         Me.TxtStartTimeH.Text = "01"
         '
@@ -316,10 +337,11 @@ Partial Class FormTStamp
         '
         Me.TxtStartTimeM.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.TxtStartTimeM.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.TxtStartTimeM.Location = New System.Drawing.Point(1149, 381)
+        Me.TxtStartTimeM.Location = New System.Drawing.Point(862, 305)
+        Me.TxtStartTimeM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtStartTimeM.MaxLength = 2
         Me.TxtStartTimeM.Name = "TxtStartTimeM"
-        Me.TxtStartTimeM.Size = New System.Drawing.Size(41, 41)
+        Me.TxtStartTimeM.Size = New System.Drawing.Size(32, 34)
         Me.TxtStartTimeM.TabIndex = 6
         Me.TxtStartTimeM.Text = "02"
         '
@@ -327,9 +349,10 @@ Partial Class FormTStamp
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label11.Location = New System.Drawing.Point(1187, 384)
+        Me.Label11.Location = New System.Drawing.Point(890, 307)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(49, 34)
+        Me.Label11.Size = New System.Drawing.Size(39, 27)
         Me.Label11.TabIndex = 49
         Me.Label11.Text = "分"
         '
@@ -337,9 +360,10 @@ Partial Class FormTStamp
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label12.Location = New System.Drawing.Point(1100, 384)
+        Me.Label12.Location = New System.Drawing.Point(825, 307)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(49, 34)
+        Me.Label12.Size = New System.Drawing.Size(39, 27)
         Me.Label12.TabIndex = 48
         Me.Label12.Text = "時"
         '
@@ -347,10 +371,11 @@ Partial Class FormTStamp
         '
         Me.TxtEndTimeH.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.TxtEndTimeH.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.TxtEndTimeH.Location = New System.Drawing.Point(1059, 522)
+        Me.TxtEndTimeH.Location = New System.Drawing.Point(794, 418)
+        Me.TxtEndTimeH.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtEndTimeH.MaxLength = 2
         Me.TxtEndTimeH.Name = "TxtEndTimeH"
-        Me.TxtEndTimeH.Size = New System.Drawing.Size(41, 41)
+        Me.TxtEndTimeH.Size = New System.Drawing.Size(32, 34)
         Me.TxtEndTimeH.TabIndex = 10
         Me.TxtEndTimeH.Text = "01"
         '
@@ -358,10 +383,11 @@ Partial Class FormTStamp
         '
         Me.TxtEndTimeM.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.TxtEndTimeM.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.TxtEndTimeM.Location = New System.Drawing.Point(1149, 522)
+        Me.TxtEndTimeM.Location = New System.Drawing.Point(862, 418)
+        Me.TxtEndTimeM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtEndTimeM.MaxLength = 2
         Me.TxtEndTimeM.Name = "TxtEndTimeM"
-        Me.TxtEndTimeM.Size = New System.Drawing.Size(41, 41)
+        Me.TxtEndTimeM.Size = New System.Drawing.Size(32, 34)
         Me.TxtEndTimeM.TabIndex = 11
         Me.TxtEndTimeM.Text = "02"
         '
@@ -369,9 +395,10 @@ Partial Class FormTStamp
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label13.Location = New System.Drawing.Point(1187, 525)
+        Me.Label13.Location = New System.Drawing.Point(890, 420)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(49, 34)
+        Me.Label13.Size = New System.Drawing.Size(39, 27)
         Me.Label13.TabIndex = 59
         Me.Label13.Text = "分"
         '
@@ -379,9 +406,10 @@ Partial Class FormTStamp
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label14.Location = New System.Drawing.Point(1100, 525)
+        Me.Label14.Location = New System.Drawing.Point(825, 420)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(49, 34)
+        Me.Label14.Size = New System.Drawing.Size(39, 27)
         Me.Label14.TabIndex = 58
         Me.Label14.Text = "時"
         '
@@ -389,10 +417,11 @@ Partial Class FormTStamp
         '
         Me.TxtEndM.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.TxtEndM.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.TxtEndM.Location = New System.Drawing.Point(875, 522)
+        Me.TxtEndM.Location = New System.Drawing.Point(656, 418)
+        Me.TxtEndM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtEndM.MaxLength = 2
         Me.TxtEndM.Name = "TxtEndM"
-        Me.TxtEndM.Size = New System.Drawing.Size(41, 41)
+        Me.TxtEndM.Size = New System.Drawing.Size(32, 34)
         Me.TxtEndM.TabIndex = 8
         Me.TxtEndM.Text = "01"
         '
@@ -400,10 +429,11 @@ Partial Class FormTStamp
         '
         Me.TxtEndD.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.TxtEndD.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.TxtEndD.Location = New System.Drawing.Point(965, 522)
+        Me.TxtEndD.Location = New System.Drawing.Point(724, 418)
+        Me.TxtEndD.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtEndD.MaxLength = 2
         Me.TxtEndD.Name = "TxtEndD"
-        Me.TxtEndD.Size = New System.Drawing.Size(41, 41)
+        Me.TxtEndD.Size = New System.Drawing.Size(32, 34)
         Me.TxtEndD.TabIndex = 9
         Me.TxtEndD.Text = "02"
         '
@@ -411,9 +441,10 @@ Partial Class FormTStamp
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label15.Location = New System.Drawing.Point(1003, 525)
+        Me.Label15.Location = New System.Drawing.Point(752, 420)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(49, 34)
+        Me.Label15.Size = New System.Drawing.Size(39, 27)
         Me.Label15.TabIndex = 55
         Me.Label15.Text = "日"
         '
@@ -421,9 +452,10 @@ Partial Class FormTStamp
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label16.Location = New System.Drawing.Point(916, 525)
+        Me.Label16.Location = New System.Drawing.Point(687, 420)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(49, 34)
+        Me.Label16.Size = New System.Drawing.Size(39, 27)
         Me.Label16.TabIndex = 54
         Me.Label16.Text = "月"
         '
@@ -431,9 +463,10 @@ Partial Class FormTStamp
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label17.Location = New System.Drawing.Point(827, 525)
+        Me.Label17.Location = New System.Drawing.Point(620, 420)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(49, 34)
+        Me.Label17.Size = New System.Drawing.Size(39, 27)
         Me.Label17.TabIndex = 53
         Me.Label17.Text = "年"
         '
@@ -441,10 +474,11 @@ Partial Class FormTStamp
         '
         Me.TxtEndY.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.TxtEndY.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.TxtEndY.Location = New System.Drawing.Point(743, 522)
+        Me.TxtEndY.Location = New System.Drawing.Point(557, 418)
+        Me.TxtEndY.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtEndY.MaxLength = 4
         Me.TxtEndY.Name = "TxtEndY"
-        Me.TxtEndY.Size = New System.Drawing.Size(82, 41)
+        Me.TxtEndY.Size = New System.Drawing.Size(62, 34)
         Me.TxtEndY.TabIndex = 7
         Me.TxtEndY.Text = "2022"
         '
@@ -452,9 +486,10 @@ Partial Class FormTStamp
         '
         Me.TxtUserID.Enabled = False
         Me.TxtUserID.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtUserID.Location = New System.Drawing.Point(1241, 55)
+        Me.TxtUserID.Location = New System.Drawing.Point(931, 44)
+        Me.TxtUserID.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtUserID.Name = "TxtUserID"
-        Me.TxtUserID.Size = New System.Drawing.Size(84, 41)
+        Me.TxtUserID.Size = New System.Drawing.Size(64, 34)
         Me.TxtUserID.TabIndex = 62
         Me.TxtUserID.Visible = False
         '
@@ -462,9 +497,10 @@ Partial Class FormTStamp
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label18.Location = New System.Drawing.Point(1061, 62)
+        Me.Label18.Location = New System.Drawing.Point(796, 50)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(174, 34)
+        Me.Label18.Size = New System.Drawing.Size(139, 27)
         Me.Label18.TabIndex = 63
         Me.Label18.Text = "ユーザーID："
         Me.Label18.Visible = False
@@ -473,9 +509,10 @@ Partial Class FormTStamp
         '
         Me.btnDel.AutoSize = True
         Me.btnDel.Font = New System.Drawing.Font("MS UI Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnDel.Location = New System.Drawing.Point(1112, 589)
+        Me.btnDel.Location = New System.Drawing.Point(834, 471)
+        Me.btnDel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnDel.Name = "btnDel"
-        Me.btnDel.Size = New System.Drawing.Size(149, 54)
+        Me.btnDel.Size = New System.Drawing.Size(112, 43)
         Me.btnDel.TabIndex = 64
         Me.btnDel.Text = "削除"
         Me.btnDel.UseVisualStyleBackColor = True
@@ -483,25 +520,27 @@ Partial Class FormTStamp
         'DateTimePickerS
         '
         Me.DateTimePickerS.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.DateTimePickerS.Location = New System.Drawing.Point(938, 324)
+        Me.DateTimePickerS.Location = New System.Drawing.Point(704, 259)
+        Me.DateTimePickerS.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DateTimePickerS.Name = "DateTimePickerS"
-        Me.DateTimePickerS.Size = New System.Drawing.Size(323, 41)
+        Me.DateTimePickerS.Size = New System.Drawing.Size(243, 34)
         Me.DateTimePickerS.TabIndex = 65
         '
         'DateTimePickerE
         '
         Me.DateTimePickerE.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.DateTimePickerE.Location = New System.Drawing.Point(938, 465)
+        Me.DateTimePickerE.Location = New System.Drawing.Point(704, 372)
+        Me.DateTimePickerE.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DateTimePickerE.Name = "DateTimePickerE"
-        Me.DateTimePickerE.Size = New System.Drawing.Size(323, 41)
+        Me.DateTimePickerE.Size = New System.Drawing.Size(243, 34)
         Me.DateTimePickerE.TabIndex = 66
         '
         'FormTStamp
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1365, 719)
+        Me.ClientSize = New System.Drawing.Size(1024, 575)
         Me.Controls.Add(Me.DateTimePickerE)
         Me.Controls.Add(Me.DateTimePickerS)
         Me.Controls.Add(Me.btnDel)
@@ -543,6 +582,7 @@ Partial Class FormTStamp
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FormTStamp"
         Me.Text = "勤怠管理（打刻）"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

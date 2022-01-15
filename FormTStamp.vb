@@ -161,7 +161,7 @@ Public Class FormTStamp
 
             Dim strSql As String
 
-            strSql = "SELECT WORKS.* FROM USERS, WORKS WHERE USERS.ID = WORKS.USER_ID AND USERS.ID ='" & Module1.mdl_member_id & "'"
+            strSql = "SELECT WORKS.* FROM USERS, WORKS WHERE USERS.ID = WORKS.USER_ID AND USERS.ID ='" & Module1.mdl_id & "'"
             strSql = strSql & " ORDER BY WORKS.START_DATE, WORKS.START_TIME, WORKS.END_DATE, WORKS.END_TIME"
 
 
@@ -253,8 +253,8 @@ Public Class FormTStamp
 
     Private Sub FormTStamp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        TxtUserID.Text = Module1.mdl_member_id ' ユーザーIDを設定
-        lblName.Text = "山田太郎"
+        TxtUserID.Text = Module1.mdl_id ' ユーザーIDを設定
+        lblName.Text = Module1.mdl_name
 
         ' 開始日時
         TxtStartY.Text = ""
@@ -314,7 +314,7 @@ Public Class FormTStamp
 
             Dim strSql As String
             strSql = "INSERT INTO WORKS (USER_ID, CONTENT, START_DATE, START_TIME, END_DATE, END_TIME) VALUES ("
-            strSql = strSql & " '" & Module1.mdl_member_id & "', '" & TxtWork.Text & "'"
+            strSql = strSql & " '" & Module1.mdl_id & "', '" & TxtWork.Text & "'"
             strSql = strSql & ",'" & strStartDate & "'"
             strSql = strSql & ",'" & strStartTime & "'"
             strSql = strSql & ",'" & strEndDate & "'"
@@ -423,7 +423,7 @@ Public Class FormTStamp
             strSql = strSql & ", END_DATE = '" & strEndDate & "'"
             strSql = strSql & ", END_TIME = '" & strEndTime & "'"
             strSql = strSql & ", UPDATED_AT = CURRENT_TIMESTAMP"
-            strSql = strSql & " WHERE ID = " & txtID.Text & " AND USER_ID = '" & Module1.mdl_member_id & "'"
+            strSql = strSql & " WHERE ID = " & txtID.Text & " AND USER_ID = '" & Module1.mdl_id & "'"
 
             'Console.WriteLine("FormTStamp Upd:" & strSql) ' デバッグ用　コンソールに出力
             Dim command As NpgsqlCommand = New NpgsqlCommand(strSql, conn)
@@ -584,4 +584,5 @@ Public Class FormTStamp
         TxtEndD.Text = strDatePicker.Substring(8, 2)
 
     End Sub
+
 End Class
